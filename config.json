@@ -1,0 +1,30 @@
+{
+    "default_model":"mistral",
+    "prompt_file_location":"prompt.txt",
+    "phi3": {
+        "model_local_path": "/home/vvijayra/models/Phi-3-mini-4k-instruct-fp16.gguf",
+        "download_repo_id": null,
+        "download_filename": null,
+        "prompt_config":{
+            "prompt":"<|system|>\nYou are a helpful assistant, who can summarize text & generate text.\n<|end|>\n<|user|>{}<|end|>\n<|assistant|>",
+            "max_tokens":256,
+            "stop": ["<|end|>"],
+            "echo": false,
+            "stream":false
+        }
+    },
+    "mistral":{
+        "model_local_path": "/home/vvijayra/models/mistral-7b-instruct-v0.2.Q5_K_M.gguf",
+        "download_repo_id": null,
+        "download_filename": null,
+        "prompt_config":{
+            "prompt":"<s>[INST] {} [/INST]</s>",
+            "max_tokens":256,  
+            "stop": ["</s>"], 
+            "echo": false,
+            "stream":false,
+            "temperature" : 0.3,
+            "top_p" : 0.1
+        }
+    }
+}
