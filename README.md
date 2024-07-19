@@ -1,0 +1,2 @@
+# kavi
+personal local llm
